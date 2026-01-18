@@ -1,377 +1,0 @@
-[I 2026-01-11 13:34:48,437] A new study created in memory with name: no-name-86a907f1-2977-4d0a-b1e5-cfad642d9d26
-================================================================================
-FEDERATED LEARNING EXPERIMENT - FULL RUN
-================================================================================
-Output Directory: fl_experiment_20260111_133448
-Num Clients: 5
-Num Rounds: 15
-================================================================================
-
-Using device: cpu
-Random seed: 42
-
-================================================================================
-STEP 1: Loading Data
-================================================================================
-Loading data...
-  Loaded: 30000 samples, 23 features
-
-================================================================================
-STEP 2: Creating Splits (Scaler fit on train only)
-================================================================================
-Creating train/val/test split...
-  Fitting StandardScaler on training data only...
-  [SAVED] Scaler to fl_experiment_20260111_133448/scaler.joblib
-  Train:   16800 samples
-  Calib:   3600 samples
-  Eval:    3600 samples
-  Test:    6000 samples
-
-================================================================================
-STEP 3: Dirichlet Partitioning (Non-IID)
-================================================================================
-
-Client Label Distributions:
-  Client 0: 1471 samples, class dist [  64 1407] (Ratio: 0.956)
-  Client 1: 2536 samples, class dist [2179  357] (Ratio: 0.141)
-  Client 2: 11111 samples, class dist [10371   740] (Ratio: 0.067)
-  Client 3: 563 samples, class dist [468  95] (Ratio: 0.169)
-  Client 4: 1119 samples, class dist [   2 1117] (Ratio: 0.998)
-
-Heterogeneity Metric (Std Dev): 0.4189
-[SAVED] fl_experiment_20260111_133448/01_client_heterogeneity.png
-
-================================================================================
-STEP 3.5: Hyperparameter Tuning
-================================================================================
-Models to tune: all
-Trials per model: 10
-
-================================================================================
-HYPERPARAMETER TUNING
-================================================================================
-Number of trials per model: 10
-DATA SPLIT USAGE: Train → Calib (early stopping) → Eval (selection) → Test (final)
-
-[INFO] Using Optuna Bayesian optimization for efficient hyperparameter search
-
-================================================================================
-OPTUNA BAYESIAN OPTIMIZATION
-================================================================================
-Number of trials per model: 10
-DATA SPLIT USAGE: Train → Calib (early stopping) → Eval (selection) → Test (final)
-
-================================================================================
-OPTUNA TUNING: MLP
-================================================================================
-Trials: 10, Timeout: None
-  0%|          | 0/10 [00:00<?, ?it/s]                                        0%|          | 0/10 [00:04<?, ?it/s]Best trial: 0. Best value: 0.819722:   0%|          | 0/10 [00:04<?, ?it/s]Best trial: 0. Best value: 0.819722:  10%|█         | 1/10 [00:04<00:41,  4.61s/it]                                                                                   Best trial: 0. Best value: 0.819722:  10%|█         | 1/10 [00:07<00:41,  4.61s/it]Best trial: 0. Best value: 0.819722:  10%|█         | 1/10 [00:07<00:41,  4.61s/it]Best trial: 0. Best value: 0.819722:  20%|██        | 2/10 [00:07<00:30,  3.84s/it]                                                                                   Best trial: 0. Best value: 0.819722:  20%|██        | 2/10 [00:11<00:30,  3.84s/it]Best trial: 0. Best value: 0.819722:  20%|██        | 2/10 [00:11<00:30,  3.84s/it]Best trial: 0. Best value: 0.819722:  30%|███       | 3/10 [00:11<00:25,  3.64s/it]                                                                                   Best trial: 0. Best value: 0.819722:  30%|███       | 3/10 [00:14<00:25,  3.64s/it]Best trial: 0. Best value: 0.819722:  30%|███       | 3/10 [00:14<00:25,  3.64s/it]Best trial: 0. Best value: 0.819722:  40%|████      | 4/10 [00:14<00:19,  3.30s/it]                                                                                   Best trial: 0. Best value: 0.819722:  40%|████      | 4/10 [00:19<00:19,  3.30s/it]Best trial: 0. Best value: 0.819722:  40%|████      | 4/10 [00:19<00:19,  3.30s/it]Best trial: 0. Best value: 0.819722:  50%|█████     | 5/10 [00:19<00:20,  4.02s/it]                                                                                   Best trial: 0. Best value: 0.819722:  50%|█████     | 5/10 [00:22<00:20,  4.02s/it]Best trial: 0. Best value: 0.819722:  50%|█████     | 5/10 [00:22<00:20,  4.02s/it]Best trial: 0. Best value: 0.819722:  60%|██████    | 6/10 [00:22<00:14,  3.70s/it]                                                                                   Best trial: 0. Best value: 0.819722:  60%|██████    | 6/10 [00:28<00:14,  3.70s/it]Best trial: 0. Best value: 0.819722:  60%|██████    | 6/10 [00:28<00:14,  3.70s/it]Best trial: 0. Best value: 0.819722:  70%|███████   | 7/10 [00:28<00:13,  4.49s/it]                                                                                   Best trial: 0. Best value: 0.819722:  70%|███████   | 7/10 [00:33<00:13,  4.49s/it]Best trial: 0. Best value: 0.819722:  70%|███████   | 7/10 [00:33<00:13,  4.49s/it]Best trial: 0. Best value: 0.819722:  80%|████████  | 8/10 [00:33<00:09,  4.60s/it]                                                                                   Best trial: 0. Best value: 0.819722:  80%|████████  | 8/10 [00:39<00:09,  4.60s/it]Best trial: 0. Best value: 0.819722:  80%|████████  | 8/10 [00:39<00:09,  4.60s/it]Best trial: 0. Best value: 0.819722:  90%|█████████ | 9/10 [00:39<00:05,  5.20s/it]                                                                                   Best trial: 0. Best value: 0.819722:  90%|█████████ | 9/10 [00:45<00:05,  5.20s/it]Best trial: 0. Best value: 0.819722:  90%|█████████ | 9/10 [00:45<00:05,  5.20s/it]Best trial: 0. Best value: 0.819722: 100%|██████████| 10/10 [00:45<00:00,  5.26s/it]Best trial: 0. Best value: 0.819722: 100%|██████████| 10/10 [00:45<00:00,  4.53s/it]
-[I 2026-01-11 13:35:33,954] A new study created in memory with name: no-name-6a7d8924-77b4-4ae5-b0ef-d42e36c4362d
-[I 2026-01-11 13:34:53,073] Trial 0 finished with value: 0.8197222222222222 and parameters: {'lr': 0.0013292918943162175, 'hidden1': 256, 'hidden2': 96, 'dropout': 0.2993292420985183}. Best is trial 0 with value: 0.8197222222222222.
-[I 2026-01-11 13:34:56,371] Trial 1 finished with value: 0.8141666666666667 and parameters: {'lr': 0.00029380279387035364, 'hidden1': 64, 'hidden2': 16, 'dropout': 0.4330880728874676}. Best is trial 0 with value: 0.8197222222222222.
-[I 2026-01-11 13:34:59,782] Trial 2 finished with value: 0.8144444444444444 and parameters: {'lr': 0.006358358856676255, 'hidden1': 192, 'hidden2': 16, 'dropout': 0.48495492608099716}. Best is trial 0 with value: 0.8197222222222222.
-[I 2026-01-11 13:35:02,543] Trial 3 finished with value: 0.8158333333333333 and parameters: {'lr': 0.03142880890840111, 'hidden1': 64, 'hidden2': 32, 'dropout': 0.09170225492671691}. Best is trial 0 with value: 0.8197222222222222.
-[I 2026-01-11 13:35:07,844] Trial 4 finished with value: 0.8141666666666667 and parameters: {'lr': 0.0008179499475211679, 'hidden1': 160, 'hidden2': 64, 'dropout': 0.14561457009902096}. Best is trial 0 with value: 0.8197222222222222.
-[I 2026-01-11 13:35:10,916] Trial 5 finished with value: 0.8175 and parameters: {'lr': 0.006847920095574782, 'hidden1': 64, 'hidden2': 48, 'dropout': 0.18318092164684585}. Best is trial 0 with value: 0.8197222222222222.
-[I 2026-01-11 13:35:17,053] Trial 6 finished with value: 0.8144444444444444 and parameters: {'lr': 0.0023345864076016252, 'hidden1': 224, 'hidden2': 32, 'dropout': 0.2571172192068058}. Best is trial 0 with value: 0.8197222222222222.
-[I 2026-01-11 13:35:21,870] Trial 7 finished with value: 0.8136111111111111 and parameters: {'lr': 0.005987474910461402, 'hidden1': 32, 'hidden2': 80, 'dropout': 0.08526206184364576}. Best is trial 0 with value: 0.8197222222222222.
-[I 2026-01-11 13:35:28,390] Trial 8 finished with value: 0.8163888888888889 and parameters: {'lr': 0.00015673095467235422, 'hidden1': 256, 'hidden2': 128, 'dropout': 0.40419867405823057}. Best is trial 0 with value: 0.8197222222222222.
-[I 2026-01-11 13:35:33,782] Trial 9 finished with value: 0.8127777777777778 and parameters: {'lr': 0.0008200518402245837, 'hidden1': 32, 'hidden2': 96, 'dropout': 0.22007624686980065}. Best is trial 0 with value: 0.8197222222222222.
-
-Best MLP Params:
-  lr: 0.0013292918943162175
-  hidden1: 256
-  hidden2: 96
-  dropout: 0.2993292420985183
-Best Eval Accuracy: 0.8197
-Trials completed: 10
-Warning: Could not generate all Optuna visualizations: Tried to import 'plotly' but failed. Please make sure that the package is installed correctly to use this feature. Actual error: No module named 'plotly'.
-
-================================================================================
-OPTUNA TUNING: LSTM
-================================================================================
-Trials: 10, Timeout: None
-  0%|          | 0/10 [00:00<?, ?it/s]                                        0%|          | 0/10 [00:31<?, ?it/s]Best trial: 0. Best value: 0.810556:   0%|          | 0/10 [00:31<?, ?it/s]Best trial: 0. Best value: 0.810556:  10%|█         | 1/10 [00:31<04:47, 31.91s/it]                                                                                   Best trial: 0. Best value: 0.810556:  10%|█         | 1/10 [01:12<04:47, 31.91s/it]Best trial: 0. Best value: 0.810556:  10%|█         | 1/10 [01:12<04:47, 31.91s/it]Best trial: 0. Best value: 0.810556:  20%|██        | 2/10 [01:12<04:53, 36.73s/it]                                                                                   Best trial: 0. Best value: 0.810556:  20%|██        | 2/10 [01:42<04:53, 36.73s/it]Best trial: 0. Best value: 0.810556:  20%|██        | 2/10 [01:42<04:53, 36.73s/it]Best trial: 0. Best value: 0.810556:  30%|███       | 3/10 [01:42<03:55, 33.67s/it]                                                                                   Best trial: 0. Best value: 0.810556:  30%|███       | 3/10 [02:26<03:55, 33.67s/it]Best trial: 3. Best value: 0.815:  30%|███       | 3/10 [02:26<03:55, 33.67s/it]   Best trial: 3. Best value: 0.815:  40%|████      | 4/10 [02:26<03:46, 37.76s/it]                                                                                Best trial: 3. Best value: 0.815:  40%|████      | 4/10 [03:02<03:46, 37.76s/it]Best trial: 4. Best value: 0.817222:  40%|████      | 4/10 [03:02<03:46, 37.76s/it]Best trial: 4. Best value: 0.817222:  50%|█████     | 5/10 [03:02<03:07, 37.45s/it]                                                                                   Best trial: 4. Best value: 0.817222:  50%|█████     | 5/10 [03:35<03:07, 37.45s/it]Best trial: 4. Best value: 0.817222:  50%|█████     | 5/10 [03:35<03:07, 37.45s/it]Best trial: 4. Best value: 0.817222:  60%|██████    | 6/10 [03:35<02:22, 35.75s/it]                                                                                   Best trial: 4. Best value: 0.817222:  60%|██████    | 6/10 [03:52<02:22, 35.75s/it]Best trial: 4. Best value: 0.817222:  60%|██████    | 6/10 [03:52<02:22, 35.75s/it]Best trial: 4. Best value: 0.817222:  70%|███████   | 7/10 [03:52<01:28, 29.51s/it]                                                                                   Best trial: 4. Best value: 0.817222:  70%|███████   | 7/10 [04:47<01:28, 29.51s/it]Best trial: 4. Best value: 0.817222:  70%|███████   | 7/10 [04:47<01:28, 29.51s/it]Best trial: 4. Best value: 0.817222:  80%|████████  | 8/10 [04:47<01:15, 37.66s/it]                                                                                   Best trial: 4. Best value: 0.817222:  80%|████████  | 8/10 [05:01<01:15, 37.66s/it]Best trial: 8. Best value: 0.8175:  80%|████████  | 8/10 [05:01<01:15, 37.66s/it]  Best trial: 8. Best value: 0.8175:  90%|█████████ | 9/10 [05:01<00:30, 30.32s/it]                                                                                 Best trial: 8. Best value: 0.8175:  90%|█████████ | 9/10 [05:24<00:30, 30.32s/it]Best trial: 8. Best value: 0.8175:  90%|█████████ | 9/10 [05:24<00:30, 30.32s/it]Best trial: 8. Best value: 0.8175: 100%|██████████| 10/10 [05:24<00:00, 28.19s/it]Best trial: 8. Best value: 0.8175: 100%|██████████| 10/10 [05:24<00:00, 32.48s/it]
-[I 2026-01-11 13:40:58,761] A new study created in memory with name: no-name-4491fdf2-3b98-492c-9cd6-a803b1b5d5c7
-[I 2026-01-11 13:36:05,864] Trial 0 finished with value: 0.8105555555555556 and parameters: {'lr': 0.0013292918943162175, 'hidden': 32, 'layers': 6, 'dropout': 0.3005575058716044}. Best is trial 0 with value: 0.8105555555555556.
-[I 2026-01-11 13:36:45,968] Trial 1 finished with value: 0.7788888888888889 and parameters: {'lr': 0.013311216080736894, 'hidden': 64, 'layers': 6, 'dropout': 0.2623782158161189}. Best is trial 0 with value: 0.8105555555555556.
-[I 2026-01-11 13:37:15,996] Trial 2 finished with value: 0.7966666666666666 and parameters: {'lr': 0.001976218934028009, 'hidden': 64, 'layers': 6, 'dropout': 0.09983689107917987}. Best is trial 0 with value: 0.8105555555555556.
-[I 2026-01-11 13:38:00,018] Trial 3 finished with value: 0.815 and parameters: {'lr': 0.00348901884549139, 'hidden': 128, 'layers': 6, 'dropout': 0.40419867405823057}. Best is trial 3 with value: 0.815.
-[I 2026-01-11 13:38:36,926] Trial 4 finished with value: 0.8172222222222222 and parameters: {'lr': 0.0008200518402245837, 'hidden': 64, 'layers': 6, 'dropout': 0.12938999080000846}. Best is trial 4 with value: 0.8172222222222222.
-[I 2026-01-11 13:39:09,370] Trial 5 finished with value: 0.8152777777777778 and parameters: {'lr': 0.009717775305059635, 'hidden': 128, 'layers': 2, 'dropout': 0.4474136752138244}. Best is trial 4 with value: 0.8172222222222222.
-[I 2026-01-11 13:39:26,037] Trial 6 finished with value: 0.8147222222222222 and parameters: {'lr': 0.00621870472776908, 'hidden': 32, 'layers': 4, 'dropout': 0.41436875457596467}. Best is trial 4 with value: 0.8172222222222222.
-[I 2026-01-11 13:40:21,154] Trial 7 finished with value: 0.7983333333333333 and parameters: {'lr': 0.0011756010900231852, 'hidden': 256, 'layers': 4, 'dropout': 0.0993578407670862}. Best is trial 4 with value: 0.8172222222222222.
-[I 2026-01-11 13:40:35,326] Trial 8 finished with value: 0.8175 and parameters: {'lr': 0.00010388823104027947, 'hidden': 32, 'layers': 4, 'dropout': 0.43155171293779676}. Best is trial 8 with value: 0.8175.
-[I 2026-01-11 13:40:58,759] Trial 9 finished with value: 0.8094444444444444 and parameters: {'lr': 0.0074112997810832455, 'hidden': 32, 'layers': 6, 'dropout': 0.23610746258097465}. Best is trial 8 with value: 0.8175.
-
-Best LSTM Params:
-  lr: 0.00010388823104027947
-  hidden: 32
-  layers: 4
-  dropout: 0.43155171293779676
-Best Eval Accuracy: 0.8175
-Trials completed: 10
-Warning: Could not generate all Optuna visualizations: Tried to import 'plotly' but failed. Please make sure that the package is installed correctly to use this feature. Actual error: No module named 'plotly'.
-
-================================================================================
-OPTUNA TUNING: XGBOOST
-================================================================================
-Trials: 10, Timeout: None
-  0%|          | 0/10 [00:00<?, ?it/s]                                        0%|          | 0/10 [00:00<?, ?it/s]Best trial: 0. Best value: 0.798333:   0%|          | 0/10 [00:00<?, ?it/s]Best trial: 0. Best value: 0.798333:  10%|█         | 1/10 [00:00<00:04,  1.85it/s]                                                                                   Best trial: 0. Best value: 0.798333:  10%|█         | 1/10 [00:01<00:04,  1.85it/s]Best trial: 1. Best value: 0.799444:  10%|█         | 1/10 [00:01<00:04,  1.85it/s]Best trial: 1. Best value: 0.799444:  20%|██        | 2/10 [00:01<00:06,  1.32it/s]                                                                                   Best trial: 1. Best value: 0.799444:  20%|██        | 2/10 [00:02<00:06,  1.32it/s]Best trial: 1. Best value: 0.799444:  20%|██        | 2/10 [00:02<00:06,  1.32it/s]Best trial: 1. Best value: 0.799444:  30%|███       | 3/10 [00:02<00:05,  1.17it/s]                                                                                   Best trial: 1. Best value: 0.799444:  30%|███       | 3/10 [00:03<00:05,  1.17it/s]Best trial: 1. Best value: 0.799444:  30%|███       | 3/10 [00:03<00:05,  1.17it/s]Best trial: 1. Best value: 0.799444:  40%|████      | 4/10 [00:03<00:05,  1.01it/s]                                                                                   Best trial: 1. Best value: 0.799444:  40%|████      | 4/10 [00:04<00:05,  1.01it/s]Best trial: 1. Best value: 0.799444:  40%|████      | 4/10 [00:04<00:05,  1.01it/s]Best trial: 1. Best value: 0.799444:  50%|█████     | 5/10 [00:04<00:04,  1.01it/s]                                                                                   Best trial: 1. Best value: 0.799444:  50%|█████     | 5/10 [00:04<00:04,  1.01it/s]Best trial: 1. Best value: 0.799444:  50%|█████     | 5/10 [00:04<00:04,  1.01it/s]                                                                                   Best trial: 1. Best value: 0.799444:  60%|██████    | 6/10 [00:05<00:03,  1.01it/s]Best trial: 1. Best value: 0.799444:  60%|██████    | 6/10 [00:05<00:03,  1.01it/s]Best trial: 1. Best value: 0.799444:  70%|███████   | 7/10 [00:05<00:01,  1.69it/s]                                                                                   Best trial: 1. Best value: 0.799444:  70%|███████   | 7/10 [00:05<00:01,  1.69it/s]Best trial: 1. Best value: 0.799444:  70%|███████   | 7/10 [00:05<00:01,  1.69it/s]Best trial: 1. Best value: 0.799444:  80%|████████  | 8/10 [00:05<00:01,  1.65it/s]                                                                                   Best trial: 1. Best value: 0.799444:  80%|████████  | 8/10 [00:05<00:01,  1.65it/s]Best trial: 1. Best value: 0.799444:  80%|████████  | 8/10 [00:05<00:01,  1.65it/s]                                                                                   Best trial: 1. Best value: 0.799444:  90%|█████████ | 9/10 [00:06<00:00,  1.65it/s]Best trial: 1. Best value: 0.799444:  90%|█████████ | 9/10 [00:06<00:00,  1.65it/s]Best trial: 1. Best value: 0.799444: 100%|██████████| 10/10 [00:06<00:00,  2.30it/s]Best trial: 1. Best value: 0.799444: 100%|██████████| 10/10 [00:06<00:00,  1.64it/s]
-[I 2026-01-11 13:41:04,846] A new study created in memory with name: no-name-e256a118-e1e5-4357-a130-4bcc8790a9fc
-[I 2026-01-11 13:40:59,302] Trial 0 finished with value: 0.7983333333333333 and parameters: {'n_estimators': 100, 'max_depth': 12, 'learning_rate': 0.18432335340553055}. Best is trial 0 with value: 0.7983333333333333.
-[I 2026-01-11 13:41:00,212] Trial 1 finished with value: 0.7994444444444444 and parameters: {'n_estimators': 200, 'max_depth': 12, 'learning_rate': 0.16217936517334897}. Best is trial 1 with value: 0.7994444444444444.
-[I 2026-01-11 13:41:01,183] Trial 2 finished with value: 0.7941666666666667 and parameters: {'n_estimators': 200, 'max_depth': 12, 'learning_rate': 0.06790539682592432}. Best is trial 1 with value: 0.7994444444444444.
-[I 2026-01-11 13:41:02,382] Trial 3 finished with value: 0.7947222222222222 and parameters: {'n_estimators': 300, 'max_depth': 12, 'learning_rate': 0.2444352309537737}. Best is trial 1 with value: 0.7994444444444444.
-[I 2026-01-11 13:41:03,368] Trial 4 finished with value: 0.7975 and parameters: {'n_estimators': 200, 'max_depth': 12, 'learning_rate': 0.0850461946640049}. Best is trial 1 with value: 0.7994444444444444.
-[I 2026-01-11 13:41:03,466] Trial 5 finished with value: 0.7622222222222222 and parameters: {'n_estimators': 50, 'max_depth': 6, 'learning_rate': 0.26949993162401814}. Best is trial 1 with value: 0.7994444444444444.
-[I 2026-01-11 13:41:03,786] Trial 6 finished with value: 0.7872222222222223 and parameters: {'n_estimators': 100, 'max_depth': 9, 'learning_rate': 0.2503338776540595}. Best is trial 1 with value: 0.7994444444444444.
-[I 2026-01-11 13:41:04,421] Trial 7 finished with value: 0.7916666666666666 and parameters: {'n_estimators': 200, 'max_depth': 9, 'learning_rate': 0.06762754764491}. Best is trial 1 with value: 0.7994444444444444.
-[I 2026-01-11 13:41:04,518] Trial 8 finished with value: 0.7525 and parameters: {'n_estimators': 100, 'max_depth': 3, 'learning_rate': 0.2602999935039221}. Best is trial 1 with value: 0.7994444444444444.
-[I 2026-01-11 13:41:04,845] Trial 9 finished with value: 0.7877777777777778 and parameters: {'n_estimators': 50, 'max_depth': 12, 'learning_rate': 0.1469423282969653}. Best is trial 1 with value: 0.7994444444444444.
-
-Best XGBOOST Params:
-  n_estimators: 200
-  max_depth: 12
-  learning_rate: 0.16217936517334897
-Best Eval Accuracy: 0.7994
-Trials completed: 10
-Warning: Could not generate all Optuna visualizations: Tried to import 'plotly' but failed. Please make sure that the package is installed correctly to use this feature. Actual error: No module named 'plotly'.
-
-================================================================================
-OPTUNA TUNING: LOGREG
-================================================================================
-Trials: 10, Timeout: None
-  0%|          | 0/10 [00:00<?, ?it/s]                                        0%|          | 0/10 [00:00<?, ?it/s]Best trial: 0. Best value: 0.687778:   0%|          | 0/10 [00:00<?, ?it/s]                                                                           Best trial: 0. Best value: 0.687778:  10%|█         | 1/10 [00:00<00:00, 26.72it/s]Best trial: 0. Best value: 0.687778:  10%|█         | 1/10 [00:00<00:00, 26.64it/s]                                                                                   Best trial: 0. Best value: 0.687778:  20%|██        | 2/10 [00:00<00:00, 41.45it/s]Best trial: 2. Best value: 0.692778:  20%|██        | 2/10 [00:00<00:00, 41.33it/s]                                                                                   Best trial: 2. Best value: 0.692778:  30%|███       | 3/10 [00:00<00:00, 36.81it/s]Best trial: 2. Best value: 0.692778:  30%|███       | 3/10 [00:00<00:00, 36.76it/s]                                                                                   Best trial: 2. Best value: 0.692778:  40%|████      | 4/10 [00:00<00:00, 40.64it/s]Best trial: 2. Best value: 0.692778:  40%|████      | 4/10 [00:00<00:00, 40.60it/s]                                                                                   Best trial: 2. Best value: 0.692778:  50%|█████     | 5/10 [00:00<00:00, 40.85it/s]Best trial: 2. Best value: 0.692778:  50%|█████     | 5/10 [00:00<00:00, 40.81it/s]Best trial: 2. Best value: 0.692778:  60%|██████    | 6/10 [00:00<00:00, 48.97it/s]                                                                                   Best trial: 2. Best value: 0.692778:  60%|██████    | 6/10 [00:00<00:00, 48.97it/s]Best trial: 2. Best value: 0.692778:  60%|██████    | 6/10 [00:00<00:00, 48.97it/s]                                                                                   Best trial: 2. Best value: 0.692778:  70%|███████   | 7/10 [00:00<00:00, 48.97it/s]Best trial: 2. Best value: 0.692778:  70%|███████   | 7/10 [00:00<00:00, 48.97it/s]                                                                                   Best trial: 2. Best value: 0.692778:  80%|████████  | 8/10 [00:00<00:00, 48.97it/s]Best trial: 2. Best value: 0.692778:  80%|████████  | 8/10 [00:00<00:00, 48.97it/s]                                                                                   Best trial: 2. Best value: 0.692778:  90%|█████████ | 9/10 [00:00<00:00, 48.97it/s]Best trial: 2. Best value: 0.692778:  90%|█████████ | 9/10 [00:00<00:00, 48.97it/s]Best trial: 2. Best value: 0.692778: 100%|██████████| 10/10 [00:00<00:00, 48.04it/s]
-[I 2026-01-11 13:41:04,866] Trial 0 finished with value: 0.6877777777777778 and parameters: {'C': 0.07459343285726547, 'solver': 'lbfgs'}. Best is trial 0 with value: 0.6877777777777778.
-[I 2026-01-11 13:41:04,883] Trial 1 finished with value: 0.6869444444444445 and parameters: {'C': 0.9846738873614568, 'solver': 'lbfgs'}. Best is trial 0 with value: 0.6877777777777778.
-[I 2026-01-11 13:41:04,894] Trial 2 finished with value: 0.6927777777777778 and parameters: {'C': 0.0019517224641449498, 'solver': 'lbfgs'}. Best is trial 2 with value: 0.6927777777777778.
-[I 2026-01-11 13:41:04,927] Trial 3 finished with value: 0.6869444444444445 and parameters: {'C': 3.470266988650414, 'solver': 'liblinear'}. Best is trial 2 with value: 0.6927777777777778.
-[I 2026-01-11 13:41:04,944] Trial 4 finished with value: 0.6869444444444445 and parameters: {'C': 14.528246637516036, 'solver': 'lbfgs'}. Best is trial 2 with value: 0.6927777777777778.
-[I 2026-01-11 13:41:04,968] Trial 5 finished with value: 0.6858333333333333 and parameters: {'C': 0.008260808399079604, 'solver': 'liblinear'}. Best is trial 2 with value: 0.6927777777777778.
-[I 2026-01-11 13:41:04,998] Trial 6 finished with value: 0.6869444444444445 and parameters: {'C': 0.14445251022763067, 'solver': 'liblinear'}. Best is trial 2 with value: 0.6927777777777778.
-[I 2026-01-11 13:41:05,020] Trial 7 finished with value: 0.6838888888888889 and parameters: {'C': 0.004982752357076452, 'solver': 'liblinear'}. Best is trial 2 with value: 0.6927777777777778.
-[I 2026-01-11 13:41:05,037] Trial 8 finished with value: 0.6866666666666666 and parameters: {'C': 0.19069966103000435, 'solver': 'lbfgs'}. Best is trial 2 with value: 0.6927777777777778.
-[I 2026-01-11 13:41:05,054] Trial 9 finished with value: 0.6869444444444445 and parameters: {'C': 0.3725393839578886, 'solver': 'lbfgs'}. Best is trial 2 with value: 0.6927777777777778.
-
-Best LOGREG Params:
-  C: 0.0019517224641449498
-  solver: lbfgs
-Best Eval Accuracy: 0.6928
-Trials completed: 10
-Warning: Could not generate all Optuna visualizations: Tried to import 'plotly' but failed. Please make sure that the package is installed correctly to use this feature. Actual error: No module named 'plotly'.
-
-[SAVED] Best hyperparameters to fl_experiment_20260111_133448/best_hyperparams.json
-[SAVED] Optuna tuning results to fl_experiment_20260111_133448/optuna_tuning_results.csv
-
-================================================================================
-OPTUNA TUNING COMPLETE
-================================================================================
-
-[COMPLETE] Hyperparameter tuning results saved to fl_experiment_20260111_133448/
-
-[LOADING] Tuned hyperparameters from fl_experiment_20260111_133448/best_hyperparams.json
-  MLP: {'lr': 0.0013292918943162175, 'hidden1': 256, 'hidden2': 96, 'dropout': 0.2993292420985183}
-  LSTM: {'lr': 0.00010388823104027947, 'hidden': 32, 'layers': 4, 'dropout': 0.43155171293779676}
-  XGBOOST: {'n_estimators': 200, 'max_depth': 12, 'learning_rate': 0.16217936517334897}
-  LogisticRegression: {'C': 0.0019517224641449498, 'solver': 'lbfgs'}
-
-================================================================================
-STEP 4: Federated Learning (MLP)
-================================================================================
-
-============================================================
-Federated Training: FL-FedAvg (MLP)
-============================================================
-Training for 15 rounds with 5 clients...
-Client sizes: [1471, 2536, 11111, 563, 1119]
-Using weighted FedAvg
-Using hyperparams: {'lr': 0.0013292918943162175, 'hidden1': 256, 'hidden2': 96, 'dropout': 0.2993292420985183}
-  Round  1: Accuracy = 0.7302
-  Round  2: Accuracy = 0.7008
-  Round  3: Accuracy = 0.6967
-  Round  4: Accuracy = 0.7402
-  Round  5: Accuracy = 0.7287
-  Round  6: Accuracy = 0.7522
-  Round  7: Accuracy = 0.7713
-  Round  8: Accuracy = 0.7562
-  Round  9: Accuracy = 0.7780
-  Round 10: Accuracy = 0.7618
-  Round 11: Accuracy = 0.7762
-  Round 12: Accuracy = 0.7693
-  Round 13: Accuracy = 0.7727
-  Round 14: Accuracy = 0.7910
-  Round 15: Accuracy = 0.7315
-
-FL-FedAvg (MLP) Final Accuracy: 0.7315
-[SAVED] fl_experiment_20260111_133448/mlp_model.pth
-[SAVED] fl_experiment_20260111_133448/mlp_config.json
-
-================================================================================
-STEP 5: Calibration Methods Comparison
-================================================================================
-
-================================================================================
-FOUR-WAY CALIBRATION COMPARISON
-================================================================================
-
-Platt Scaling
-----------------------------------------
-  Platt Parameters: A=0.9198, B=-0.7440
-
-Temperature Scaling
-----------------------------------------
-  Learned Temperature: T = 0.9546
-
-Beta Calibration
-----------------------------------------
-  Beta Parameters: a=-0.7440, b=0.9198, c=1.0000
-
-FedCal Client-Specific Calibration
-============================================================
-Client 0: A=0.6945, B=1.3403 (class_ratio=0.956)
-Client 1: A=0.8479, B=-0.9960 (class_ratio=0.141)
-Client 2: A=0.6895, B=-1.2586 (class_ratio=0.067)
-Client 3: A=0.7722, B=-0.9473 (class_ratio=0.169)
-Client 4: A=0.6501, B=1.5486 (class_ratio=0.998)
-
-Weighted Aggregated Parameters: A=0.7140, B=-0.7940
-A std dev: 0.0790
-B std dev: 1.3828
-
---------------------------------------------------------------------------------
-Calibration Methods Comparison:
---------------------------------------------------------------------------------
-Uncalibrated        : Acc=0.7217, F1=0.4830, ECE=0.2271
-Platt Scaling       : Acc=0.8136, F1=0.4696, ECE=0.0847
-Temperature Scaling : Acc=0.7217, F1=0.4830, ECE=0.2248
-Beta Calibration    : Acc=0.8136, F1=0.4696, ECE=0.0847
-FedCal              : Acc=0.8150, F1=0.4219, ECE=0.0918
-[SAVED] Calibration models: platt_scaler.pth, temperature_scaler.pth, beta_scaler.pth
-
-================================================================================
-STEP 6: Federated Learning (LSTM)
-================================================================================
-
-============================================================
-Federated Training: FL-FedAvg (LSTM)
-============================================================
-Training for 15 rounds with 5 clients...
-Client sizes: [1471, 2536, 11111, 563, 1119]
-Using weighted FedAvg
-Using hyperparams: {'lr': 0.00010388823104027947, 'hidden': 32, 'layers': 4, 'dropout': 0.43155171293779676}
-  Round  1: Accuracy = 0.5140
-  Round  2: Accuracy = 0.6315
-  Round  3: Accuracy = 0.6757
-  Round  4: Accuracy = 0.6898
-  Round  5: Accuracy = 0.7090
-  Round  6: Accuracy = 0.7100
-  Round  7: Accuracy = 0.7192
-  Round  8: Accuracy = 0.7342
-  Round  9: Accuracy = 0.7512
-  Round 10: Accuracy = 0.7667
-  Round 11: Accuracy = 0.7798
-  Round 12: Accuracy = 0.7890
-  Round 13: Accuracy = 0.8013
-  Round 14: Accuracy = 0.8037
-  Round 15: Accuracy = 0.8017
-
-FL-FedAvg (LSTM) Final Accuracy: 0.8017
-[SAVED] fl_experiment_20260111_133448/lstm_model.pth
-[SAVED] fl_experiment_20260111_133448/lstm_config.json
-
-================================================================================
-STEP 7: Training Baseline Models
-================================================================================
-
-================================================================================
-TRAINING BASELINE MODELS
-================================================================================
-
-[1/4] Training Logistic Regression...
---------------------------------------------------
-  Accuracy: 0.6753
-  AUC:      0.7075
-  F1:       0.4571
-  ECE:      0.2357
-
-[2/4] Training XGBoost...
---------------------------------------------------
-  Accuracy: 0.7960
-  AUC:      0.7420
-  F1:       0.4827
-  ECE:      0.1153
-
-[3/4] Training Local Neural Networks...
---------------------------------------------------
-  Client 0: Acc=0.2230, AUC=0.6478, ECE=0.7072
-  Client 1: Acc=0.7993, AUC=0.7378, ECE=0.0496
-  Client 2: Acc=0.7835, AUC=0.7389, ECE=0.1644
-  Client 3: Acc=0.8042, AUC=0.7115, ECE=0.0661
-  Client 4: Acc=0.2212, AUC=0.6091, ECE=0.7769
-
-  Average: Acc=0.5662, AUC=0.6890, ECE=0.3529
-
-[4/4] Training Central Neural Network...
---------------------------------------------------
-  Accuracy: 0.8167
-  AUC:      0.7597
-  F1:       0.4198
-  ECE:      0.0214
-[SAVED] fl_experiment_20260111_133448/central_nn.pth
-
-================================================================================
-STEP 7b: Comprehensive Calibration Analysis
-================================================================================
-[SAVED] fl_experiment_20260111_133448/calibration_heatmap_all_models.png
-[SAVED] fl_experiment_20260111_133448/Fig2_Calibration.png
-[SAVED] fl_experiment_20260111_133448/calibration_detailed_results.csv
-[SAVED] fl_experiment_20260111_133448/calibration_best_per_model.csv
-
-Calibration Analysis Summary (Best ECE per model):
-  FL-FedAvg (MLP): Beta (ECE=0.0564)
-  FL-FedAvg (LSTM): Platt (ECE=0.0716)
-  Central NN: Temperature (ECE=0.0302)
-
-================================================================================
-STEP 8: Final Model Comparison
-================================================================================
-[SAVED] fl_experiment_20260111_133448/Fig3_FinalComparison.png
-[SAVED] fl_experiment_20260111_133448/Fig1_Convergence.png
-
-FINAL MODEL LEADERBOARD:
-              Model  Accuracy       F1      ECE
-Logistic Regression  0.675333 0.457079 0.235706
-         Central NN  0.812778 0.383912 0.030201
-     Local NN (Avg)  0.566233 0.280500 0.352860
-            FL-LSTM  0.791111 0.249501 0.071553
-             FL-MLP  0.793889 0.205567 0.056409
-
-================================================================================
-STEP 9: SHAP Analysis
-================================================================================
-  0%|          | 0/50 [00:00<?, ?it/s] 74%|███████▍  | 37/50 [00:00<00:00, 368.17it/s]100%|██████████| 50/50 [00:00<00:00, 369.53it/s]
-/Users/I772971/Desktop/untitled folder/fl_credit_scoring/main.py:587: FutureWarning: The NumPy global RNG was seeded by calling `np.random.seed`. In a future version this function will no longer use the global RNG. Pass `rng` explicitly to opt-in to the new behaviour and silence this warning.
-  shap.summary_plot(shap_values, X_test[:50], show=False)
-[SAVED] fl_experiment_20260111_133448/07_shap_summary.png
-
-================================================================================
-STEP 9b: LIME Analysis
-================================================================================
-[SAVED] fl_experiment_20260111_133448/lime_explanation.png
-
-================================================================================
-EXPERIMENT COMPLETE
-================================================================================
-
-Results saved to: fl_experiment_20260111_133448/
-  - experiment_log.txt
-  - results_summary.csv
-  - Visualization figures
-
-================================================================================
-KEY FINDINGS
-================================================================================
-  - Results Summary and Leaderboard above
-
-================================================================================
