@@ -1,0 +1,178 @@
+# Configuration File for FL Credit Risk Assessment
+# Edit these parameters to customize your experiment
+
+# =============================================================================
+# DATA CONFIGURATION
+# =============================================================================
+data:
+  # Directory containing raw Freddie Mac files
+  raw_data_dir: "data/raw"
+  
+  # Output directory for processed data
+  processed_data_dir: "data/processed"
+  
+  # Time period for training/testing
+  train_years: [2006, 2007]  # Training period
+  val_year: 2008              # Validation (for calibration)
+  test_year: 2009             # Testing period
+  
+  # Data filtering
+  termination_codes: [2, 3, 6, 9]  # Paper-specified codes
+  default_codes: [3, 9]             # Short sale & REO
+  
+  # For quick testing, use single quarter
+  quick_test: true
+  test_quarters: ["2006Q1"]  # Only used if quick_test=true
+
+# =============================================================================
+# MODEL CONFIGURATION
+# =============================================================================
+model:
+  # LSTM architecture
+  input_dim: 95  # Will be auto-detected from data
+  hidden_dim: 64
+  num_layers: 4
+  dropout: 0.2
+  
+  # Output layers
+  fc1_dim: 64
+  output_dim: 1  # Binary classification
+
+# =============================================================================
+# TRAINING CONFIGURATION
+# =============================================================================
+training:
+  # Federated Learning
+  global_rounds: 1      # CHANGE TO 100 for full experiment
+  local_epochs: 1        # CHANGE TO 10 for full experiment
+  
+  # Optimizer
+  optimizer: "SGD"
+  learning_rate: 0.01
+  momentum: 0.9
+  weight_decay: 0.0001
+  
+  # Data
+  batch_size: 128
+  max_sequence_length: 60
+  
+  # Device
+  device: "auto"  # Options: 'auto', 'cuda', 'mps', 'cpu'
+  
+  # Checkpointing
+  save_checkpoints: true
+  checkpoint_dir: "checkpoints"
+  checkpoint_interval: 10  # Save every N rounds
+
+# =============================================================================
+# FEDERATED LEARNING CONFIGURATION
+# =============================================================================
+federated_learning:
+  # Client selection
+  num_clients: 14  # Total FIs in dataset
+  min_client_samples: 100  # Minimum samples for client to participate
+  
+  # Client sampling (for larger scale experiments)
+  client_fraction: 1.0  # Fraction of clients per round (1.0 = all)
+  
+  # Aggregation
+  aggregation_method: "fedavg"  # Options: 'fedavg', 'weighted_avg'
+  
+  # Scenarios to evaluate
+  scenarios:
+    local: true       # Scenario 1: Independent local models
+    central: true     # Scenario 2: Centralized model
+    fl_n: true        # Scenario 3a: FL with all clients
+    fl_n_minus_1: true  # Scenario 3b: FL without biggest client
+    fl_n_minus_2: true  # Scenario 3c: FL without top 2 clients
+
+# =============================================================================
+# CALIBRATION CONFIGURATION
+# =============================================================================
+calibration:
+  # Methods to evaluate
+  methods:
+    platt: true        # Platt Scaling (Logistic Calibration)
+    isotonic: true     # Isotonic Regression
+    temperature: true  # Temperature Scaling (recommended for neural nets)
+    beta: true         # Beta Calibration
+  
+  # Calibration metrics
+  metrics:
+    - "ece"      # Expected Calibration Error
+    - "brier"    # Brier Score
+    - "accuracy"
+    - "f1"
+    - "precision"
+    - "recall"
+  
+  # ECE calculation
+  ece_bins: 10  # Number of bins for ECE calculation
+
+# =============================================================================
+# VISUALIZATION CONFIGURATION
+# =============================================================================
+visualization:
+  # Which visualizations to generate
+  generate:
+    heatmaps: true
+    reliability_diagrams: true
+    bar_charts: true
+    improvement_matrix: true
+    method_ranking: true
+    brier_comparison: true
+  
+  # Output settings
+  dpi: 300
+  format: "png"  # Options: 'png', 'pdf', 'svg'
+  output_dir: "results/calibration"
+  
+  # Style
+  style: "whitegrid"  # seaborn style
+  font_size: 11
+
+# =============================================================================
+# EVALUATION CONFIGURATION
+# =============================================================================
+evaluation:
+  # Metrics to compute
+  metrics:
+    - "accuracy"
+    - "precision"
+    - "recall"
+    - "f1"
+    - "auc"
+  
+  # Results output
+  results_dir: "results/evaluation"
+  save_predictions: true
+  save_models: false  # Set to true to save trained models
+
+# =============================================================================
+# LOGGING CONFIGURATION
+# =============================================================================
+logging:
+  level: "INFO"  # Options: 'DEBUG', 'INFO', 'WARNING', 'ERROR'
+  log_file: "logs/experiment.log"
+  console_output: true
+
+# =============================================================================
+# EXPERIMENT TRACKING
+# =============================================================================
+experiment:
+  name: "fl_credit_risk_v1"
+  tags:
+    - "replication"
+    - "calibration"
+    - "2006q1_test"
+  
+  # Save experiment metadata
+  save_metadata: true
+  metadata_file: "results/experiment_metadata.json"
+
+# =============================================================================
+# REPRODUCIBILITY
+# =============================================================================
+reproducibility:
+  random_seed: 42
+  deterministic: true  # Set to false for potential speed improvement

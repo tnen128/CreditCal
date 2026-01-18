@@ -1,0 +1,86 @@
+Device: mps
+================================================================================
+COMPLETE CALIBRATION EVALUATION - ALL 5 SCENARIOS
+================================================================================
+
+[1/6] Loading dataset...
+  Train: 67,113, Val: 31,335, Test: 15,151
+
+[2/6] Preparing features...
+  Features: 95
+
+[3/6] Scenario 1: Local Models...
+    Uncalibrated - ECE: 0.3206, F1: 0.9740
+    Platt - ECE: 0.0104 (Δ -0.3102)
+    Isotonic - ECE: 0.0132 (Δ -0.3074)
+    Temperature - ECE: 0.0104 (Δ -0.3102)
+    Beta - ECE: 0.0104 (Δ -0.3102)
+    Uncalibrated - ECE: 0.2844, F1: 0.9522
+    Platt - ECE: 0.0097 (Δ -0.2746)
+    Isotonic - ECE: 0.0156 (Δ -0.2688)
+    Temperature - ECE: 0.0096 (Δ -0.2747)
+    Beta - ECE: 0.0097 (Δ -0.2747)
+    Uncalibrated - ECE: 0.3491, F1: 0.9836
+    Platt - ECE: 0.0007 (Δ -0.3484)
+    Isotonic - ECE: 0.0052 (Δ -0.3439)
+    Temperature - ECE: 0.0009 (Δ -0.3483)
+    Beta - ECE: 0.0008 (Δ -0.3483)
+    Uncalibrated - ECE: 0.3471, F1: 0.9855
+    Platt - ECE: 0.0104 (Δ -0.3366)
+    Isotonic - ECE: 0.0079 (Δ -0.3391)
+    Temperature - ECE: 0.0104 (Δ -0.3367)
+    Beta - ECE: 0.0104 (Δ -0.3367)
+    Uncalibrated - ECE: 0.3088, F1: 0.9661
+    Platt - ECE: 0.0198 (Δ -0.2891)
+    Isotonic - ECE: 0.0677 (Δ -0.2411)
+    Temperature - ECE: 0.0198 (Δ -0.2891)
+    Beta - ECE: 0.0198 (Δ -0.2891)
+
+[4/6] Scenario 2: Central Model...
+    Uncalibrated - ECE: 0.2981, F1: 0.9586
+    Platt - ECE: 0.0071 (Δ -0.2910)
+    Isotonic - ECE: 0.0070 (Δ -0.2911)
+    Temperature - ECE: 0.0070 (Δ -0.2911)
+    Beta - ECE: 0.0071 (Δ -0.2910)
+
+[5/6] Scenario 3a: FL (n)...
+    Uncalibrated - ECE: 0.2940, F1: 0.9589
+    Platt - ECE: 0.0061 (Δ -0.2879)
+    Isotonic - ECE: 0.0054 (Δ -0.2887)
+    Temperature - ECE: 0.0061 (Δ -0.2879)
+    Beta - ECE: 0.0061 (Δ -0.2879)
+
+[6/6] Scenario 3b: FL (n-1)...
+    Uncalibrated - ECE: 0.2958, F1: 0.9592
+    Platt - ECE: 0.0064 (Δ -0.2894)
+    Isotonic - ECE: 0.0064 (Δ -0.2895)
+    Temperature - ECE: 0.0064 (Δ -0.2894)
+    Beta - ECE: 0.0065 (Δ -0.2893)
+
+[7/6] Scenario 3c: FL (n-2)...
+    Uncalibrated - ECE: 0.2932, F1: 0.9608
+    Platt - ECE: 0.0061 (Δ -0.2872)
+    Isotonic - ECE: 0.0121 (Δ -0.2811)
+    Temperature - ECE: 0.0060 (Δ -0.2872)
+    Beta - ECE: 0.0060 (Δ -0.2873)
+
+[6/6] Saving results and generating visualizations...
+✅ Results saved to results/calibration/calibration_results_all.json
+
+Generating visualizations...
+  [1/6] Creating 3-panel heatmap...
+  [2/6] Creating reliability diagrams grid...
+  [3/6] Creating overall performance bar chart...
+  [4/6] Creating improvement matrix...
+/Users/I772971/Desktop/untitled folder/fl-credit-risk-assessment/src/visualization.py:302: UserWarning: Glyph 11015 (\N{DOWNWARDS BLACK ARROW}) missing from font(s) Arial.
+  plt.savefig(save_path, dpi=300, bbox_inches='tight')
+/Users/I772971/Desktop/untitled folder/fl-credit-risk-assessment/src/visualization.py:302: UserWarning: Glyph 65039 (\N{VARIATION SELECTOR-16}) missing from font(s) Arial.
+  plt.savefig(save_path, dpi=300, bbox_inches='tight')
+  [5/6] Creating method ranking...
+  [6/6] Creating Brier Score comparison...
+
+  ✅ All 6 visualizations saved to results/calibration/
+
+================================================================================
+✅ COMPLETE CALIBRATION EVALUATION DONE!
+================================================================================
