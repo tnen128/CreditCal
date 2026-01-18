@@ -1,0 +1,159 @@
+Device: mps
+================================================================================
+COMPLETE CALIBRATION EVALUATION - ALL 5 SCENARIOS
+================================================================================
+
+[1/6] Loading dataset...
+  Train: 245,375, Val: 236,446, Test: 131,856
+
+[2/6] Preparing features...
+  Features: 96
+
+[3/6] Scenario 1: Local Models...
+      Saved Uncalibrated predictions to results/2006_10epoch__25rounds/Local-Other_sellers/uncalibrated_predictions.csv
+    Uncalibrated - ECE: 0.2449, F1: 0.9673
+      Saved Platt predictions to results/2006_10epoch__25rounds/Local-Other_sellers/platt_calibrated_predictions.csv
+    Platt - ECE: 0.0034 (Δ -0.2414)
+      Saved Isotonic predictions to results/2006_10epoch__25rounds/Local-Other_sellers/isotonic_calibrated_predictions.csv
+    Isotonic - ECE: 0.0082 (Δ -0.2366)
+      Saved Temperature predictions to results/2006_10epoch__25rounds/Local-Other_sellers/temperature_calibrated_predictions.csv
+    Temperature - ECE: 0.0034 (Δ -0.2414)
+      Saved Beta predictions to results/2006_10epoch__25rounds/Local-Other_sellers/beta_calibrated_predictions.csv
+    Beta - ECE: 0.0034 (Δ -0.2414)
+      Saved Uncalibrated predictions to results/2006_10epoch__25rounds/Local-COUNTRYWIDE_HOME_LOA/uncalibrated_predictions.csv
+    Uncalibrated - ECE: 0.2249, F1: 0.9608
+      Saved Platt predictions to results/2006_10epoch__25rounds/Local-COUNTRYWIDE_HOME_LOA/platt_calibrated_predictions.csv
+    Platt - ECE: 0.0042 (Δ -0.2206)
+      Saved Isotonic predictions to results/2006_10epoch__25rounds/Local-COUNTRYWIDE_HOME_LOA/isotonic_calibrated_predictions.csv
+    Isotonic - ECE: 0.0105 (Δ -0.2144)
+      Saved Temperature predictions to results/2006_10epoch__25rounds/Local-COUNTRYWIDE_HOME_LOA/temperature_calibrated_predictions.csv
+    Temperature - ECE: 0.0042 (Δ -0.2207)
+      Saved Beta predictions to results/2006_10epoch__25rounds/Local-COUNTRYWIDE_HOME_LOA/beta_calibrated_predictions.csv
+    Beta - ECE: 0.0041 (Δ -0.2207)
+      Saved Uncalibrated predictions to results/2006_10epoch__25rounds/Local-GMAC_MORTGAGE_CORPOR/uncalibrated_predictions.csv
+    Uncalibrated - ECE: 0.3180, F1: 0.9836
+      Saved Platt predictions to results/2006_10epoch__25rounds/Local-GMAC_MORTGAGE_CORPOR/platt_calibrated_predictions.csv
+    Platt - ECE: 0.0023 (Δ -0.3157)
+      Saved Isotonic predictions to results/2006_10epoch__25rounds/Local-GMAC_MORTGAGE_CORPOR/isotonic_calibrated_predictions.csv
+    Isotonic - ECE: 0.0029 (Δ -0.3151)
+      Saved Temperature predictions to results/2006_10epoch__25rounds/Local-GMAC_MORTGAGE_CORPOR/temperature_calibrated_predictions.csv
+    Temperature - ECE: 0.0021 (Δ -0.3159)
+      Saved Beta predictions to results/2006_10epoch__25rounds/Local-GMAC_MORTGAGE_CORPOR/beta_calibrated_predictions.csv
+    Beta - ECE: 0.0022 (Δ -0.3158)
+      Saved Uncalibrated predictions to results/2006_10epoch__25rounds/Local-FIFTH_THIRD_BANK/uncalibrated_predictions.csv
+    Uncalibrated - ECE: 0.3072, F1: 0.9737
+      Saved Platt predictions to results/2006_10epoch__25rounds/Local-FIFTH_THIRD_BANK/platt_calibrated_predictions.csv
+    Platt - ECE: 0.0020 (Δ -0.3052)
+      Saved Isotonic predictions to results/2006_10epoch__25rounds/Local-FIFTH_THIRD_BANK/isotonic_calibrated_predictions.csv
+    Isotonic - ECE: 0.0060 (Δ -0.3012)
+      Saved Temperature predictions to results/2006_10epoch__25rounds/Local-FIFTH_THIRD_BANK/temperature_calibrated_predictions.csv
+    Temperature - ECE: 0.0021 (Δ -0.3051)
+      Saved Beta predictions to results/2006_10epoch__25rounds/Local-FIFTH_THIRD_BANK/beta_calibrated_predictions.csv
+    Beta - ECE: 0.0020 (Δ -0.3051)
+      Saved Uncalibrated predictions to results/2006_10epoch__25rounds/Local-TAYLOR,_BEAN_&_WHITA/uncalibrated_predictions.csv
+    Uncalibrated - ECE: 0.2979, F1: 0.9801
+      Saved Platt predictions to results/2006_10epoch__25rounds/Local-TAYLOR,_BEAN_&_WHITA/platt_calibrated_predictions.csv
+    Platt - ECE: 0.0042 (Δ -0.2937)
+      Saved Isotonic predictions to results/2006_10epoch__25rounds/Local-TAYLOR,_BEAN_&_WHITA/isotonic_calibrated_predictions.csv
+    Isotonic - ECE: 0.0039 (Δ -0.2940)
+      Saved Temperature predictions to results/2006_10epoch__25rounds/Local-TAYLOR,_BEAN_&_WHITA/temperature_calibrated_predictions.csv
+    Temperature - ECE: 0.0042 (Δ -0.2937)
+      Saved Beta predictions to results/2006_10epoch__25rounds/Local-TAYLOR,_BEAN_&_WHITA/beta_calibrated_predictions.csv
+    Beta - ECE: 0.0042 (Δ -0.2937)
+
+[4/6] Scenario 2: Central Model...
+    Training Central Model...
+      Epoch 1/10 - Loss: 0.4521
+      Epoch 3/10 - Loss: 0.3841
+      Epoch 5/10 - Loss: 0.3811
+      Epoch 7/10 - Loss: 0.3805
+      Epoch 9/10 - Loss: 0.3801
+      ✓ Training complete - Final Loss: 0.3800
+      Saved Uncalibrated predictions to results/2006_10epoch__25rounds/Central/uncalibrated_predictions.csv
+    Uncalibrated - ECE: 0.2021, F1: 0.9643
+      Saved Platt predictions to results/2006_10epoch__25rounds/Central/platt_calibrated_predictions.csv
+    Platt - ECE: 0.0042 (Δ -0.1978)
+      Saved Isotonic predictions to results/2006_10epoch__25rounds/Central/isotonic_calibrated_predictions.csv
+    Isotonic - ECE: 0.0041 (Δ -0.1980)
+      Saved Temperature predictions to results/2006_10epoch__25rounds/Central/temperature_calibrated_predictions.csv
+    Temperature - ECE: 0.0043 (Δ -0.1978)
+      Saved Beta predictions to results/2006_10epoch__25rounds/Central/beta_calibrated_predictions.csv
+    Beta - ECE: 0.0043 (Δ -0.1978)
+
+[5/6] Scenario 3a: FL (n)...
+    Training FL Model (FL (n))...
+      Epoch 1/10 - Loss: 0.4626
+      Epoch 3/10 - Loss: 0.3882
+      Epoch 5/10 - Loss: 0.3827
+      Epoch 7/10 - Loss: 0.3813
+      Epoch 9/10 - Loss: 0.3808
+      ✓ Training complete - Final Loss: 0.3807
+      Saved Uncalibrated predictions to results/2006_10epoch__25rounds/FL_n/uncalibrated_predictions.csv
+    Uncalibrated - ECE: 0.2019, F1: 0.9642
+      Saved Platt predictions to results/2006_10epoch__25rounds/FL_n/platt_calibrated_predictions.csv
+    Platt - ECE: 0.0041 (Δ -0.1979)
+      Saved Isotonic predictions to results/2006_10epoch__25rounds/FL_n/isotonic_calibrated_predictions.csv
+    Isotonic - ECE: 0.0036 (Δ -0.1983)
+      Saved Temperature predictions to results/2006_10epoch__25rounds/FL_n/temperature_calibrated_predictions.csv
+    Temperature - ECE: 0.0041 (Δ -0.1978)
+      Saved Beta predictions to results/2006_10epoch__25rounds/FL_n/beta_calibrated_predictions.csv
+    Beta - ECE: 0.0041 (Δ -0.1978)
+
+[6/6] Scenario 3b: FL (n-1)...
+    Training FL Model (FL (n-1))...
+      Epoch 1/10 - Loss: 0.4825
+      Epoch 3/10 - Loss: 0.3947
+      Epoch 5/10 - Loss: 0.3820
+      Epoch 7/10 - Loss: 0.3800
+      Epoch 9/10 - Loss: 0.3794
+      ✓ Training complete - Final Loss: 0.3785
+      Saved Uncalibrated predictions to results/2006_10epoch__25rounds/FL_n-1/uncalibrated_predictions.csv
+    Uncalibrated - ECE: 0.2068, F1: 0.9660
+      Saved Platt predictions to results/2006_10epoch__25rounds/FL_n-1/platt_calibrated_predictions.csv
+    Platt - ECE: 0.0034 (Δ -0.2035)
+      Saved Isotonic predictions to results/2006_10epoch__25rounds/FL_n-1/isotonic_calibrated_predictions.csv
+    Isotonic - ECE: 0.0034 (Δ -0.2035)
+      Saved Temperature predictions to results/2006_10epoch__25rounds/FL_n-1/temperature_calibrated_predictions.csv
+    Temperature - ECE: 0.0034 (Δ -0.2034)
+      Saved Beta predictions to results/2006_10epoch__25rounds/FL_n-1/beta_calibrated_predictions.csv
+    Beta - ECE: 0.0034 (Δ -0.2034)
+
+[7/6] Scenario 3c: FL (n-2)...
+    Training FL Model (FL (n-2))...
+      Epoch 1/10 - Loss: 0.4877
+      Epoch 3/10 - Loss: 0.4080
+      Epoch 5/10 - Loss: 0.3848
+      Epoch 7/10 - Loss: 0.3796
+      Epoch 9/10 - Loss: 0.3778
+      ✓ Training complete - Final Loss: 0.3773
+      Saved Uncalibrated predictions to results/2006_10epoch__25rounds/FL_n-2/uncalibrated_predictions.csv
+    Uncalibrated - ECE: 0.2099, F1: 0.9672
+      Saved Platt predictions to results/2006_10epoch__25rounds/FL_n-2/platt_calibrated_predictions.csv
+    Platt - ECE: 0.0034 (Δ -0.2065)
+      Saved Isotonic predictions to results/2006_10epoch__25rounds/FL_n-2/isotonic_calibrated_predictions.csv
+    Isotonic - ECE: 0.0038 (Δ -0.2061)
+      Saved Temperature predictions to results/2006_10epoch__25rounds/FL_n-2/temperature_calibrated_predictions.csv
+    Temperature - ECE: 0.0034 (Δ -0.2065)
+      Saved Beta predictions to results/2006_10epoch__25rounds/FL_n-2/beta_calibrated_predictions.csv
+    Beta - ECE: 0.0034 (Δ -0.2065)
+
+[6/6] Saving results and generating visualizations...
+✅ Results saved to results/2006_10epoch__25rounds/calibration/calibration_results_all.json
+
+Generating visualizations...
+  [1/6] Creating 3-panel heatmap...
+  [2/6] Creating reliability diagrams grid...
+  [3/6] Creating overall performance bar chart...
+  [4/6] Creating improvement matrix...
+/Users/I772971/Desktop/untitled folder/fl-credit-risk-assessment/src/visualization.py:302: UserWarning: Glyph 11015 (\N{DOWNWARDS BLACK ARROW}) missing from font(s) Arial.
+  plt.savefig(save_path, dpi=300, bbox_inches='tight')
+/Users/I772971/Desktop/untitled folder/fl-credit-risk-assessment/src/visualization.py:302: UserWarning: Glyph 65039 (\N{VARIATION SELECTOR-16}) missing from font(s) Arial.
+  plt.savefig(save_path, dpi=300, bbox_inches='tight')
+  [5/6] Creating method ranking...
+  [6/6] Creating Brier Score comparison...
+
+  ✅ All 6 visualizations saved to results/2006_10epoch__25rounds/calibration/
+
+================================================================================
+✅ COMPLETE CALIBRATION EVALUATION DONE!
+================================================================================
