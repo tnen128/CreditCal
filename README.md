@@ -42,7 +42,7 @@ pip install -r requirements.txt
 
 **Step 2 — Get the data**
 
-Register for a free account at https://www.freddiemac.com/research/datasets/sf-loanlevel-dataset and download the origination and monthly performance files for 2006–2009. Place them under `data/raw/`. You'll also need a few macroeconomic files (LAUS, FRED, FMHPI) — see [`data/README.md`](data/README.md) for the exact file list and sources.
+Register for a free account at https://www.freddiemac.com/research/datasets/sf-loanlevel-dataset and download the origination and monthly performance files for 2006–2009. Place them under `data/raw/` in project root dir. You'll also need a few macroeconomic files (LAUS, FRED, FMHPI)
 
 Once the raw files are in place, run the preprocessing script:
 
