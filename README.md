@@ -26,8 +26,6 @@ Each of the 14 banks trains a local LSTM model on their own loan data. Only the 
 
 The LSTM takes a 60-month loan sequence (95 features per step) and outputs a default probability. After training, we apply four calibration methods to make those probabilities reliable enough for real-world use.
 
-![LSTM Architecture](results/arch%20diagrams/lstm_model_architecture.png)
-
 ---
 
 ## 🚀 Quick Start
@@ -105,8 +103,4 @@ Your results are in two places:
 3. Guo, C., et al. (2017). *On Calibration of Modern Neural Networks*
 4. Kull, M., et al. (2017). *Beta calibration: a well-founded and easily implemented improvement on logistic calibration for binary classifiers*
 
----
 
-## 📜 License
-
-MIT — see [LICENSE](LICENSE).
